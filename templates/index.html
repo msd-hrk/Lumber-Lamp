@@ -2,7 +2,7 @@
 {% block body %}
 <h2> テスト </h2>
 <hr>
-{{ text }}<br>
-{{ text2 }}<br>
-<br>
+{% for dt in text2 %}
+<li>ID:{{ dt[0] }} ユーザ名:{{ dt[1] }}</li>
+{% endfor %}<br>
 {% endblock %}

@@ -1,10 +1,13 @@
 #coding:utf-8
-from flask import Flask, render_template
+from flask import Flask
+from controller import Controllers as ctrl
+
 app = Flask(__name__)
 @app.route('/')
 def index():
-    return render_template('index.html',text="hello　woああああrld",text2="お試し",page_title="お試しページ")
-    #最初に読み込むhtmlと、htmlに渡す変数を指定
+    ctl = ctrl.Controllers()
+    return ctl.ctl_index()
+
 if __name__ == '__main__':
     app.debug = True
     app.run()
