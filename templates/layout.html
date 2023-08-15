@@ -5,6 +5,19 @@
     <link rel = "stylesheet" href = "static/style.css">
     <title>{{ page_title }}</title>
 </head>
-{% block body %}
-{% endblock %}
+<body>
+    <header>
+        <h1 class="site-title">Lamber Lamp</h1>
+        <h2 class="title">掲示板</h2>
+        <nav class="nav">
+            <ul class="menu-gp">
+                <li class="menu-item"><button>ボタン1</button></li>
+                <li class="menu-item"><button>ボタン2</button></li>
+                <li class="menu-item"><button>ボタン3</button></li>
+            </ul>
+        </nav>
+    </header>
+    {% block body %}
+    {% endblock %}
+</body>
 </html>
