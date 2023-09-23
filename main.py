@@ -8,6 +8,11 @@ def index():
     ctl = ctrl.Controllers()
     return ctl.ctl_index()
 
+@app.route('/detail/<article_id>')
+def detail_page(article_id):
+    ctl = ctrl.Controllers()
+    return ctl.ctl_detail()
+
 if __name__ == '__main__':
     app.debug = True
     app.run()
